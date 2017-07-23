@@ -497,6 +497,8 @@ void main(int argc,char *argv[])
                     printf("\nWrong input\n");
             }
             }
+            else
+                printf("\nEnter data in correct format\n");
         }
     }
     else if(argc != 0)
@@ -508,8 +510,10 @@ void main(int argc,char *argv[])
             printf("\nEnter 1 to search for available trains"
             "\nEnter 2 to exit"
             "\nEnter your choice : ");
-            scanf("%d",&ch);
-            switch(ch)
+            fflush(stdin);
+            fflush(stdin);
+            if(scanf("%d",&ch) == 1 && getchar() == '\n')
+            {switch(ch)
             {
                 case 1 :
                     userSearch();
@@ -519,6 +523,9 @@ void main(int argc,char *argv[])
                 default : 
                     printf("\nWrong Input\n"); 
             }
+            }
+            else
+                printf("\nEnter data in correct format\n");
         }
     }
     else
