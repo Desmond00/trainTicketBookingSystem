@@ -198,7 +198,7 @@ void userSearch()
             }
             if(dist%20 != 0)
                 dist += 20;
-            printf("Train no : %d\nTrain fare : %d",tr.no,(dist/20)*5);
+            printf("Train no : %d\nTrain fare : %d Rs.",tr.no,(dist/20)*5);
             flag = 1;
         }
         else if(strcmp(tr.src,src1) == 0)
@@ -445,10 +445,10 @@ void userSearch()
     if(flag == 2)
     {    printf("\nTrain found with station distance %d\n",count);
         printf("\n\nThis train is available for this source and destination \n");
-        printf("The distance is : %d\n",dist);
+        printf("The distance is : %dKM\n",dist);
         if(dist%20 != 0)
             dist += 20; 
-        printf("Train no : %d\nTrain fare : %d",tr.no,(dist/20)*5);
+        printf("Train no : %d\nTrain fare : %d Rs.",tr.no,(dist/20)*5);
         flag=1;
     }
 }
